@@ -1,9 +1,16 @@
+"""
+Main program
+"""
+
 import networkx as nx
 from network import Network
 from constants import AGENTS_COUNT, EVOLUTION_ITERATIONS
 
 
 def main():
+    """
+    Generate a plot showing the evolution of opinions in Barabasi-Albert, Watts-Strogatz, and Erdos-Renyi networks.
+    """
     barabasi_albert = Network(
         nx.barabasi_albert_graph(AGENTS_COUNT, 2), "Barabasi-Albert"
     )
