@@ -1,3 +1,6 @@
-# Define the number of agents
+"""
+Constants for the project
+"""
+
 AGENTS_COUNT = 20
 EVOLUTION_ITERATIONS = 5

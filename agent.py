@@ -1,4 +1,13 @@
+"""
+Agent class
+"""
+
+
 class Agent:
+    """
+    Agent class, contains network agent's attributes
+    """
+
     influence: float
     flexibility: float
     opinion: list[float]
