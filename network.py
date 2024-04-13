@@ -153,32 +153,45 @@ class Network:
                 f"Opinions of Agents in the {self.network_name} Network (Iteration {i+1})"
             )
 
-    def show_point_spread_in_time(self, iterations) -> None:
+    def show_point_spread_in_time(self, max_iterations) -> None:
         """
-        Show the point spread in time for X and Y axes based on the number of iterations.
+        Show the point spread in time for X and Y axes based on the number of max_iterations.
 
         Parameters:
-            iterations (int): The number of iterations to perform.
+            max_iterations (int): The maximal number of iterations to perform.
 
         Returns:
             None
         """
+        iterations_before_stabilization = 0
         point_spread = {"x": [], "y": []}
-        for i in range(iterations):
+        for i in range(max_iterations):
             self.update_opinions()
             opinion_spread = self.opinion_spread()
+            if opinion_spread["x"] <= 0.1 and opinion_spread["y"] <= 0.1:
+                iterations_before_stabilization = i
+                break
+
             point_spread["x"].append(opinion_spread["x"])
             point_spread["y"].append(opinion_spread["y"])
 
+        iterations_before_stabilization = (
+            max_iterations
+            if iterations_before_stabilization == 0
+            else iterations_before_stabilization
+        )
+
         for i, axis in enumerate(["x", "y"]):
             plt.subplot(2, 1, i + 1)
-            plt.plot(range(iterations), point_spread[axis])
-            plt.xticks(range(iterations))
+            plt.plot(range(iterations_before_stabilization), point_spread[axis])
+            plt.xticks(range(iterations_before_stabilization))
             plt.title(f"{axis.upper()} axis")
             plt.xlabel("Iterations")
             plt.ylabel(f"{axis.upper()}-axis spread")
 
-        plt.suptitle("Point spread in time for X and Y axes")
+        plt.suptitle(
+            f"Point spread in time for X and Y axes. Iterations before stabilization: {iterations_before_stabilization}"
+        )
         plt.tight_layout()
         plt.show()
 
