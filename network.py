@@ -6,7 +6,6 @@ import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
 from agent import Agent
-from constants import AGENTS_COUNT
 
 
 class Network:
@@ -93,7 +92,7 @@ class Network:
             None
         """
         # Get the positions of the agents
-        pos = {i: self.agents[i].opinion for i in range(AGENTS_COUNT)}
+        pos = {i: self.agents[i].opinion for i in range(self.graph.number_of_nodes())}
         opinions = np.array([agent.opinion for agent in self.agents])
 
         # Create the plot
@@ -155,13 +154,14 @@ class Network:
 
     def show_point_spread_in_time(self, max_iterations) -> None:
         """
-        Show the point spread in time for X and Y axes based on the number of max_iterations.
+        Update the point spread until they values reaches below 0.1,
+        and return the point spread and the number of iterations before stabilization.
 
         Parameters:
-            max_iterations (int): The maximal number of iterations to perform.
+            max_iterations (int): The maximum number of iterations to perform.
 
         Returns:
-            None
+            tuple: The point spread and the number of iterations before stabilization.
         """
         iterations_before_stabilization = 0
         point_spread = {"x": [], "y": []}
@@ -181,6 +181,18 @@ class Network:
             else iterations_before_stabilization
         )
 
+        return point_spread, iterations_before_stabilization
+
+    def plot_point_spread_in_time(self, point_spread, iterations_before_stabilization):
+        """
+        Plot the point spread in time for X and Y axes based on the number of max_iterations.
+
+        Parameters:
+            max_iterations (int): The maximal number of iterations to perform.
+
+        Returns:
+            None
+        """
         for i, axis in enumerate(["x", "y"]):
             plt.subplot(2, 1, i + 1)
             plt.plot(range(iterations_before_stabilization), point_spread[axis])
@@ -190,7 +202,7 @@ class Network:
             plt.ylabel(f"{axis.upper()}-axis spread")
 
         plt.suptitle(
-            f"Point spread in time for X and Y axes. Iterations before stabilization: {iterations_before_stabilization}"
+            f"Point spread in time for {self.network_name} network. Population: {self.graph.number_of_nodes()} agents."
         )
         plt.tight_layout()
         plt.show()
