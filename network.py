@@ -62,7 +62,7 @@ class Network:
             )
             agent_population_share = self.graph.degree[i] / self.graph.number_of_nodes()
             mode_modifier = (
-                agent_population_share + neighbor_influence
+                np.mean([agent_population_share, neighbor_influence])
             ) * agent.flexibility
             new_opinion = []
             ## triangular distribution
