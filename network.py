@@ -54,8 +54,10 @@ class Network:
         """
         for i, agent in enumerate(self.agents):
             neighbors = list(self.graph.neighbors(i))
-            neighbor_opinions = np.mean(
-                [self.agents[neighbor].opinion for neighbor in neighbors], axis=0
+            neighbor_opinions = np.average(
+                [self.agents[neighbor].opinion for neighbor in neighbors],
+                weights=[self.agents[neighbor].influence for neighbor in neighbors],
+                axis=0,
             )
             neighbor_influence = np.mean(
                 [self.agents[neighbor].influence for neighbor in neighbors], axis=0
