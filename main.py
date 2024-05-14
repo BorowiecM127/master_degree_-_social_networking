@@ -47,8 +47,13 @@ def main():
     """
     Generate a plot showing the evolution of opinions in Barabasi-Albert, Watts-Strogatz, and Erdos-Renyi networks.
     """
-    max_iterations = 20
-    agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
+    show_point_spread_in_time = False
+    only_final_plot = True
+    max_iterations = 50
+    if show_point_spread_in_time:
+        agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
+    else:
+        agents_counts = [50]
     single_population_repetitions = 10
     network_generators = [
         create_barabasi_albert_network,
@@ -62,21 +67,24 @@ def main():
             average_iterations_before_stabilization = 0
             for _ in range(single_population_repetitions):
                 network = network_generator(agents_count)
-                point_spread, iterations_before_stabilization = (
-                    network.show_point_spread_in_time(max_iterations)
-                )
-                network.plot_point_spread_in_time(
-                    point_spread, iterations_before_stabilization
-                )
-                average_iterations_before_stabilization += (
-                    iterations_before_stabilization
-                )
+                if show_point_spread_in_time:
+                    point_spread, iterations_before_stabilization = (
+                        network.show_point_spread_in_time(max_iterations)
+                    )
+                    network.plot_point_spread_in_time(
+                        point_spread, iterations_before_stabilization
+                    )
+                    average_iterations_before_stabilization += (
+                        iterations_before_stabilization
+                    )
+                else:
+                    network.plot_opinions_evolution(max_iterations, only_final_plot)
 
-            average_iterations_before_stabilization /= single_population_repetitions
-
-            print(
-                f"- Population: {agents_count}, Average iterations: {average_iterations_before_stabilization}"
-            )
+            if show_point_spread_in_time:
+                average_iterations_before_stabilization /= single_population_repetitions
+                print(
+                    f"- Population: {agents_count}, Average iterations: {average_iterations_before_stabilization}"
+                )
 
         print()
 
