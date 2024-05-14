@@ -67,18 +67,19 @@ class Network:
                 np.mean([agent_population_share, neighbor_influence])
             ) * agent.flexibility
             new_opinion = []
-            ## triangular distribution
+            ## exponential distribution
             for i in range(2):
                 opinion_range = abs(agent.opinion[i] - neighbor_opinions[i])
                 lower_opinion = min(neighbor_opinions[i], agent.opinion[i])
+                upper_opinion = max(neighbor_opinions[i], agent.opinion[i])
 
-                new_opinion.append(
-                    np.random.triangular(
-                        left=lower_opinion,
-                        mode=lower_opinion + (opinion_range * mode_modifier),
-                        right=max(neighbor_opinions[i], agent.opinion[i]),
-                    )
+                opinion = lower_opinion + np.random.exponential(
+                    scale=(opinion_range * mode_modifier * 500)
                 )
+                opinion = max(opinion, lower_opinion)
+                opinion = min(opinion, upper_opinion)
+
+                new_opinion.append(opinion)
 
             agent.opinion = new_opinion
 
@@ -144,15 +145,20 @@ class Network:
 
         plt.show()
 
-    def plot_opinions_evolution(self, iterations) -> None:
+    def plot_opinions_evolution(self, iterations, only_final_plot=False) -> None:
         """
         Update opinions using Glauber Dynamics for `iterations` iterations and plot the opinions for each network
         """
         for i in range(iterations):
             self.update_opinions()
-            self.plot_opinions(
-                f"Opinions of Agents in the {self.network_name} Network (Iteration {i+1})"
-            )
+            if not only_final_plot:
+                self.plot_opinions(
+                    f"Opinions of Agents in the {self.network_name} Network (Iteration {i+1})"
+                )
+            elif i == iterations - 1:
+                self.plot_opinions(
+                    f"Opinions of Agents in the {self.network_name} Network (Iteration {i+1})"
+                )
 
     def show_point_spread_in_time(self, max_iterations) -> None:
         """
