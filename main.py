@@ -3,7 +3,7 @@ Main program
 """
 
 import networkx as nx
-from agent import Agent
+import copy
 from network import Network
 from network_update import NetworkUpdate
 
@@ -33,11 +33,12 @@ def main():
         lambda agents_count: (nx.erdos_renyi_graph(agents_count, 0.3), "Erdos-Renyi"),
     ]
 
-    agents = None
+    agents = []
 
-    for network_generator in network_generators:
-        print(f"Network: {network_generator(5)[1]}")
-        for agents_count in agents_counts:
+    for agents_count in agents_counts:
+        print(f"Agents count: {agents_count}")
+        for network_generator in network_generators:
+            print(f"    Network: {network_generator(5)[1]}")
             average_iterations_before_stabilization = 0
             for i in range(single_population_repetitions):
                 nx_data = network_generator(agents_count)
@@ -48,10 +49,10 @@ def main():
                 #     nx_data[0], nx_data[1], NetworkUpdate.PROFESSOR, 20, i, True
                 # )
 
-                if agents is not None:
-                    network.agents = agents
+                if len(agents) == 0 or len(agents) != len(network.agents):
+                    agents = copy.deepcopy(network.agents)
                 else:
-                    agents = network.agents
+                    network.agents = copy.deepcopy(agents)
 
                 if show_point_spread_in_time:
                     point_spread, iterations_before_stabilization = (
@@ -70,7 +71,7 @@ def main():
             if show_point_spread_in_time:
                 average_iterations_before_stabilization /= single_population_repetitions
                 print(
-                    f"- Population: {agents_count}, Average iterations: {average_iterations_before_stabilization}"
+                    f"        Average iterations: {average_iterations_before_stabilization}"
                 )
 
         print()
