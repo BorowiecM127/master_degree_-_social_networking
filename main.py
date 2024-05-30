@@ -3,6 +3,7 @@ Main program
 """
 
 import networkx as nx
+from agent import Agent
 from network import Network
 from network_update import NetworkUpdate
 
@@ -32,6 +33,8 @@ def main():
         lambda agents_count: (nx.erdos_renyi_graph(agents_count, 0.3), "Erdos-Renyi"),
     ]
 
+    agents = None
+
     for network_generator in network_generators:
         print(f"Network: {network_generator(5)[1]}")
         for agents_count in agents_counts:
@@ -44,6 +47,12 @@ def main():
                 # network = Network(
                 #     nx_data[0], nx_data[1], NetworkUpdate.PROFESSOR, 20, i, True
                 # )
+
+                if agents is not None:
+                    network.agents = agents
+                else:
+                    agents = network.agents
+
                 if show_point_spread_in_time:
                     point_spread, iterations_before_stabilization = (
                         network.show_point_spread_in_time(max_iterations)
