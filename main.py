@@ -7,99 +7,6 @@ from network import Network
 from network_update import NetworkUpdate
 
 
-def create_barabasi_albert_network(
-    agents_count: int,
-    update_type: NetworkUpdate,
-    update_parameter: float,
-    simulation_number: int,
-    use_csv_writer: bool = False,
-) -> Network:
-    """
-    Create a Barabasi-Albert network with the specified number of agents.
-
-    Parameters:
-    - agents_count (int): The number of agents in the network.
-    - update_type (NetworkUpdate): The type of update to be applied to the network.
-    - update_parameter (float): The parameter used for updating the network.
-    - simulation_number (int): The number of the simulation.
-    - use_csv_writer (bool, optional): Whether to use a CSV file for logging. Defaults to False.
-
-    Returns:
-    - Network: The Barabasi-Albert network created.
-    """
-
-    return Network(
-        nx.barabasi_albert_graph(agents_count, 2),
-        "Barabasi-Albert",
-        update_type,
-        update_parameter,
-        simulation_number,
-        use_csv_writer,
-    )
-
-
-def create_watts_strogatz_network(
-    agents_count: int,
-    update_type: NetworkUpdate,
-    update_parameter: float,
-    simulation_number: int,
-    use_csv_writer: bool = False,
-) -> Network:
-    """
-    Create a Watts-Strogatz network with the specified number of agents.
-
-    Parameters:
-    - agents_count (int): The number of agents in the network.
-    - update_type (NetworkUpdate): The type of update to be applied to the network.
-    - update_parameter (float): The parameter used for updating the network.
-    - simulation_number (int): The number of the simulation.
-    - use_csv_writer (bool, optional): Whether to use a CSV file for logging. Defaults to False.
-
-    Returns:
-    - Network: The Watts-Strogatz network created.
-    """
-
-    return Network(
-        nx.watts_strogatz_graph(agents_count, 4, 0.5),
-        "Watts-Strogatz",
-        update_type,
-        update_parameter,
-        simulation_number,
-        use_csv_writer,
-    )
-
-
-def create_erdos_renyi_network(
-    agents_count: int,
-    update_type: NetworkUpdate,
-    update_parameter: float,
-    simulation_number: int,
-    use_csv_writer: bool = False,
-) -> Network:
-    """
-    Create an Erdos-Renyi network with the specified number of agents.
-
-    Args:
-        agents_count (int): The number of agents in the network.
-        update_type (NetworkUpdate): The type of update to be applied to the network.
-        update_parameter (float): The parameter used for updating the network.
-        simulation_number (int): The number of the simulation.
-        use_csv_writer (bool, optional): Whether to use a CSV file for logging. Defaults to False.
-
-    Returns:
-        Network: The Erdos-Renyi network created.
-    """
-
-    return Network(
-        nx.erdos_renyi_graph(agents_count, 0.3),
-        "Erdos-Renyi",
-        update_type,
-        update_parameter,
-        simulation_number,
-        use_csv_writer,
-    )
-
-
 def main():
     """
     Generate a plot showing the evolution of opinions in Barabasi-Albert, Watts-Strogatz, and Erdos-Renyi networks.
@@ -109,35 +16,34 @@ def main():
     only_final_plot = True
     max_iterations = 50
     if show_point_spread_in_time:
-        agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
-        # agents_counts = [20, 50]
+        # agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
+        agents_counts = [20, 50]
     else:
         agents_counts = [50]
     single_population_repetitions = 10
     network_generators = [
-        create_barabasi_albert_network,
-        create_watts_strogatz_network,
-        create_erdos_renyi_network,
+        lambda agents_count: (
+            nx.barabasi_albert_graph(agents_count, 2),
+            "Barabasi-Albert",
+        ),
+        lambda agents_count: (
+            nx.watts_strogatz_graph(agents_count, 4, 0.5),
+            "Watts-Strogatz",
+        ),
+        lambda agents_count: (nx.erdos_renyi_graph(agents_count, 0.3), "Erdos-Renyi"),
     ]
 
     for network_generator in network_generators:
-        print(f"Network: {network_generator(5, None, None, None).network_name}")
+        print(f"Network: {network_generator(5)[1]}")
         for agents_count in agents_counts:
             average_iterations_before_stabilization = 0
             for i in range(single_population_repetitions):
-                network = network_generator(
-                    agents_count=agents_count,
-                    update_type=NetworkUpdate.STUDENT,
-                    update_parameter=500,
-                    simulation_number=i,
-                    use_csv_writer=True,
+                nx_data = network_generator(agents_count)
+                network = Network(
+                    nx_data[0], nx_data[1], NetworkUpdate.STUDENT, 500, i, True
                 )
-                # network = network_generator(
-                #     agents_count=agents_count,
-                #     update_type=NetworkUpdate.PROFESSOR,
-                #     update_parameter=20,
-                #     simulation_number=i,
-                #     use_csv_writer=True,
+                # network = Network(
+                #     nx_data[0], nx_data[1], NetworkUpdate.PROFESSOR, 20, i, True
                 # )
                 if show_point_spread_in_time:
                     point_spread, iterations_before_stabilization = (
