@@ -11,16 +11,15 @@ def main():
     """
     Generate a plot showing the evolution of opinions in Barabasi-Albert, Watts-Strogatz, and Erdos-Renyi networks.
     """
-    # show_point_spread_in_time = False
     show_point_spread_in_time = True
+    show_point_plot_spread = False
     only_final_plot = True
     max_iterations = 50
-    if show_point_spread_in_time:
-        # agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
-        agents_counts = [20, 50]
-    else:
-        agents_counts = [50]
     single_population_repetitions = 10
+
+    # agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
+    agents_counts = [20, 50]
+
     network_generators = [
         lambda agents_count: (
             nx.barabasi_albert_graph(agents_count, 2),
@@ -49,9 +48,10 @@ def main():
                     point_spread, iterations_before_stabilization = (
                         network.show_point_spread_in_time(max_iterations)
                     )
-                    # network.plot_point_spread_in_time(
-                    #     point_spread, iterations_before_stabilization
-                    # )
+                    if show_point_plot_spread:
+                        network.plot_point_spread_in_time(
+                            point_spread, iterations_before_stabilization
+                        )
                     average_iterations_before_stabilization += (
                         iterations_before_stabilization
                     )
