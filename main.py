@@ -18,6 +18,9 @@ def main():
     max_iterations = 50
     single_population_repetitions = 10
 
+    opinion_update = 500
+    network_update = NetworkUpdate.STUDENT
+
     # agents_counts = [20, 50, 100, 200, 500, 1000, 2000, 5000]
     agents_counts = [20, 50]
 
@@ -43,11 +46,13 @@ def main():
             for i in range(single_population_repetitions):
                 nx_data = network_generator(agents_count)
                 network = Network(
-                    nx_data[0], nx_data[1], NetworkUpdate.STUDENT, 500, i, True
+                    nx_data[0],
+                    nx_data[1],
+                    network_update,
+                    opinion_update,
+                    i,
+                    True,
                 )
-                # network = Network(
-                #     nx_data[0], nx_data[1], NetworkUpdate.PROFESSOR, 20, i, True
-                # )
 
                 if len(agents) == 0 or len(agents) != len(network.agents):
                     agents = copy.deepcopy(network.agents)
