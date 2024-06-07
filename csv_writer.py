@@ -37,7 +37,7 @@ class CSVWriter:
         self.update_parameter = update_parameter
         self.agent_count = agent_count
         self.simulation_number = simulation_number
-        self.path = f"./csv/{self.network_name}_{self.update_method}_{self.agent_count}_{self.simulation_number}.csv"
+        self.path = f"./csv/{self.network_name}_{self.update_method}_{self.update_parameter}_{self.agent_count}_{self.simulation_number}.csv"
 
     def create_new_file(self) -> None:
         """
