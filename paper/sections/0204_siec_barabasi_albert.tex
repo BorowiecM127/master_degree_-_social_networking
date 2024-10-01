@@ -1,0 +1,51 @@
+\section{Sieć Barabási-Albert}
+Model Barabási-Albert (BA) to model sieci bezskalowej, gdzie stopnie węzłów podążają za rozkładem potęgowym.
+Model ten został zaproponowany przez Albert-László Barabásiego i Rékę Albert w 1999 roku \cite{Barabasi1999} i jest jednym z najważniejszych modeli do opisu sieci rzeczywistych,
+takich jak sieci społecznościowe, internet, sieci metaboliczne i wiele innych.
+
+\subsection{Założenia modelu Barabási-Albert}
+Model BA opiera się na dwóch kluczowych mechanizmach:
+
+\begin{itemize}
+    \item \textbf{Preferencyjne przyłączanie:} Nowe węzły mają większe prawdopodobieństwo połączenia się z węzłami, które już mają wiele połączeń.
+          Oznacza to, że „bogaci stają się bogatsi” - węzły o wysokim stopniu przyciągają więcej nowych połączeń.
+    \item \textbf{Wzrost:} Sieć rozwija się w czasie, przy czym do istniejącej sieci dodawane są nowe węzły, które tworzą połączenia z już istniejącymi węzłami.
+\end{itemize}
+
+\subsection{Algorytm generowania sieci Barabási-Albert}
+Proces budowania sieci BA jest następujący:
+
+\begin{enumerate}
+    \item \textbf{Inicjalizacja:} Rozpocznij od małej sieci początkowej składającej się z $m_0$ węzłów, które są połączone w pewien sposób.
+    \item \textbf{Dodawanie nowego węzła:} Na każdym kroku dodawany jest nowy węzeł, który tworzy $m \leq m_0$ krawędzi łączących go z już istniejącymi węzłami.
+    \item \textbf{Preferencyjne przyłączanie:} Prawdopodobieństwo, że nowy węzeł połączy się z istniejącym węzłem $i$, jest proporcjonalne do stopnia węzła $k_i$. Formalnie, prawdopodobieństwo to wynosi:
+          \[
+              \Pi(k_i) = \frac{k_i}{\sum_{j} k_j},
+          \]
+          gdzie $k_i$ to stopień węzła $i$, a suma w mianowniku przebiega przez wszystkie istniejące węzły w sieci.
+\end{enumerate}
+
+Proces ten jest kontynuowany, aż sieć osiągnie oczekiwaną liczbę węzłów.
+
+\subsection{Właściwości sieci Barabási-Albert}
+\begin{itemize}
+    \item \textbf{Rozkład skali:} W sieciach generowanych według modelu BA rozkład stopni węzłów podlega prawu potęgowemu, tj. $P(k) \sim k^{-3}$.
+          Oznacza to, że większość węzłów ma niewielką liczbę połączeń, ale istnieje niewielka liczba węzłów (tzw. hubów) o bardzo wysokim stopniu.
+    \item \textbf{Efekt małego świata:} Sieci BA, podobnie jak rzeczywiste sieci, mają stosunkowo małą średnią odległość między węzłami.
+    \item \textbf{Preferencyjne przyłączanie:} Mechanizm ten prowadzi do tworzenia hubów, które dominują w strukturze sieci.
+\end{itemize}
+
+\subsection{Zastosowania sieci Barabási-Albert}
+Model BA dobrze opisuje strukturę wielu rzeczywistych sieci, w tym:
+\begin{itemize}
+    \item \textbf{Sieci internetowe:} Węzły reprezentują strony internetowe, a krawędzie — linki między nimi. Występuje kilka stron (hubów) mających bardzo dużą liczbę połączeń.
+    \item \textbf{Sieci społecznościowe:} Węzły reprezentują osoby, a krawędzie ich relacje społeczne. Niektóre osoby (np. celebryci) mają znacznie więcej połączeń niż inne.
+    \item \textbf{Sieci biologiczne:} W sieciach metabolicznych czy sieciach interakcji białek obserwuje się strukturę skali bez charakterystycznej wielkości.
+\end{itemize}
+
+\subsection{Ograniczenia modelu Barabási-Albert}
+Mimo że model BA jest użyteczny, ma pewne ograniczenia:
+\begin{itemize}
+    \item \textbf{Słaba klasteryzacja:} Sieci BA mają niższy współczynnik klasteryzacji niż obserwowane w rzeczywistych sieciach.
+    \item \textbf{Mała różnorodność w ewolucji sieci:} Model zakłada jeden mechanizm wzrostu, co jest zbyt uproszczone w porównaniu z rzeczywistymi sieciami, które mogą rozwijać się na wiele sposobów.
+\end{itemize}

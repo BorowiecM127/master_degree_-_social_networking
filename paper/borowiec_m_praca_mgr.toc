@@ -2,26 +2,55 @@
 \thispagestyle {empty}
 \contentsline {chapter}{\numberline {1}Wstęp}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Podstawy teoretyczne}{7}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Opis metod (algorytmy, założenia, warunki graniczne)}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Rozkład trójkątny}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Nowy modyfikator środka rozkładu}{10}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Opis technologii wykorzystanych w pracy}{11}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Opis implementacji}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Klasa Network}{13}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Klasa Agent}{13}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Model początkowy}{15}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Pierwsze poprawki}{15}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{15}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{16}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Drugie poprawki}{16}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{16}{subsection.6.4.1}%
-\contentsline {subsubsection}{Sieć Barabasi-Albert}{17}{subsubsection*.1}%
-\contentsline {subsubsection}{Sieć Watts-Strogatz}{17}{subsubsection*.2}%
-\contentsline {subsubsection}{Sieć Erdos-Renyi}{17}{subsubsection*.3}%
-\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{17}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{19}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Analiza otrzymanych wyników}{23}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Podsumowanie}{25}{chapter.8}%
-\contentsline {chapter}{Spis tabel}{26}{chapter.8}%
-\contentsline {chapter}{Spis rysunk\'ow}{26}{chapter.8}%
+\contentsline {section}{\numberline {2.1}Czym jest ABM?}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Główne cechy ABM}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Zastosowania ABM}{7}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Sieci społecznościowe}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Elementy sieci społecznościowych}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Rodzaje sieci społecznościowych}{9}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Sieć Erdős-Rényi}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definicja modelu Erdős-Rényi}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Właściwości sieci Erdős-Rényi}{10}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Zastosowania sieci Erdős-Rényi}{10}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Ograniczenia modelu Erdős-Rényi}{10}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Sieć Barabási-Albert}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Założenia modelu Barabási-Albert}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Algorytm generowania sieci Barabási-Albert}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Właściwości sieci Barabási-Albert}{12}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Zastosowania sieci Barabási-Albert}{12}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Ograniczenia modelu Barabási-Albert}{12}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}Sieć Watts-Strogatz}{12}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cechy modelu Watts-Strogatz}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Algorytm generowania sieci Watts-Strogatz}{13}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Właściwości sieci Watts-Strogatz}{13}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Zastosowania sieci Watts-Strogatz}{14}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Ograniczenia modelu Watts-Strogatz}{14}{subsection.2.5.5}%
+\contentsline {section}{\numberline {2.6}Diagram Nolana}{14}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Kontekst historyczno-naukowy}{15}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Opis diagramu Nolana}{15}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Zastosowanie i znaczenie diagramu Nolana}{16}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Krytyka diagramu Nolana}{16}{subsection.2.6.4}%
+\contentsline {chapter}{\numberline {3}Opis metod (algorytmy, założenia, warunki graniczne)}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rozkład trójkątny}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Nowy modyfikator środka rozkładu}{18}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Opis technologii wykorzystanych w pracy}{19}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Opis implementacji}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Klasa Network}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Klasa Agent}{21}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Model początkowy}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pierwsze poprawki}{23}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{23}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{24}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Drugie poprawki}{24}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{24}{subsection.6.4.1}%
+\contentsline {subsubsection}{Sieć Barabasi-Albert}{25}{subsubsection*.1}%
+\contentsline {subsubsection}{Sieć Watts-Strogatz}{25}{subsubsection*.2}%
+\contentsline {subsubsection}{Sieć Erdos-Renyi}{25}{subsubsection*.3}%
+\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{25}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{27}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Analiza otrzymanych wyników}{31}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Podsumowanie}{33}{chapter.8}%
+\contentsline {chapter}{Spis tabel}{34}{chapter.8}%
+\contentsline {chapter}{Spis rysunk\'ow}{34}{chapter.8}%
+\contentsline {chapter}{Bibliografia}{35}{chapter*.4}%

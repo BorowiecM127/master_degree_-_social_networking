@@ -1,0 +1,41 @@
+\section{Sieć Erdős-Rényi}
+Model sieci Erdős-Rényi (ER) jest jednym z najprostszych i najwcześniejszych modeli matematycznych do generowania losowych sieci.
+Nazwa pochodzi od nazwisk dwóch matematyków, Paula Erdősa i Alfréda Rényi, którzy w 1959 roku zaproponowali ten model \cite{Erdos1959}.
+Model ten jest często stosowany jako punkt odniesienia w analizie sieci i badaniach naukowych dotyczących struktur sieciowych.
+
+\subsection{Definicja modelu Erdős-Rényi}
+Istnieją dwie podstawowe wersje modelu Erdős-Rényi:
+
+\begin{itemize}
+      \item \textbf{Model $G(n, M)$}: Dany jest zbiór $n$ węzłów, a następnie losowo wybierane jest dokładnie $M$ krawędzi spośród wszystkich możliwych par węzłów.
+            Każda z $M$ krawędzi jest dodawana niezależnie.
+      \item \textbf{Model $G(n, p)$}: Dany jest zbiór $n$ węzłów, a każda para węzłów jest połączona krawędzią z prawdopodobieństwem $p$, niezależnie od innych par.
+            Ostateczna liczba krawędzi w tej wersji jest zmienną losową.
+\end{itemize}
+
+Najczęściej stosowaną wersją jest model $G(n, p)$, który jest bardziej intuicyjny i daje większą elastyczność w kontroli gęstości sieci.
+
+\subsection{Właściwości sieci Erdős-Rényi}
+\begin{itemize}
+      \item \textbf{Rozkład stopni węzłów:} W modelu $G(n, p)$ stopień każdego węzła jest zmienną losową o rozkładzie dwumianowym $Bin(n - 1, p)$.
+            Dla dużych $n$ rozkład ten zbliża się do rozkładu Poissona o wartości oczekiwanej $\lambda = p(n - 1)$.
+      \item \textbf{Średnia długość najkrótszej ścieżki:} W miarę wzrostu liczby węzłów $n$, średnia odległość między węzłami jest stosunkowo krótka, rzędu $\ln n / \ln (np)$,
+            co jest typowe dla tzw. efektu „małego świata”.
+      \item \textbf{Klasteryzacja:} W sieci Erdős-Rényi współczynnik klasteryzacji, czyli prawdopodobieństwo, że dwa węzły sąsiadujące z danym węzłem są również połączone ze sobą,
+            jest rzędu $p$ i nie zależy od lokalnych struktur.
+      \item \textbf{Pojawienie się gigantycznego składnika:} W modelu $G(n, p)$ istnieje próg $p_c = \frac{1}{n}$,
+            powyżej którego zaczyna się tworzyć tzw. gigantyczny składnik – duża, spójna część sieci obejmująca znaczną część węzłów.
+      \item \textbf{Losowy charakter:} Sieć nie posiada regularnej struktury, a rozmieszczenie krawędzi jest całkowicie losowe.
+\end{itemize}
+
+\subsection{Zastosowania sieci Erdős-Rényi}
+Model Erdős-Rényi stanowi podstawę teoretyczną do badań nad sieciami losowymi i służy jako punkt odniesienia w analizie bardziej złożonych struktur sieciowych.
+Choć rzadko spotyka się go w rzeczywistych sieciach (np. sieciach społecznościowych, biologicznych, komputerowych), pomaga on zrozumieć, jak różnią się rzeczywiste sieci od struktur losowych.
+
+\subsection{Ograniczenia modelu Erdős-Rényi}
+Model Erdős-Rényi nie odzwierciedla dobrze wielu cech rzeczywistych sieci:
+\begin{itemize}
+      \item \textbf{Mała klasteryzacja:} Rzeczywiste sieci często mają znacznie wyższy współczynnik klasteryzacji niż sieć ER.
+      \item \textbf{Rozkład stopni węzłów:} W sieci ER stopnie węzłów mają rozkład zbliżony do Poissona,
+            podczas gdy wiele rzeczywistych sieci charakteryzuje się rozkładem potęgowym (np. większość węzłów ma niski stopień, ale istnieje kilka węzłów o bardzo wysokim stopniu).
+\end{itemize}

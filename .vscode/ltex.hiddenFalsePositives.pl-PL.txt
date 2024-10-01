@@ -1,0 +1,73 @@
+{"rule":"NIETYPOWA_KOMBINACJA_DUZYCH_I_MALYCH_LITER","sentence":"^\\QSieci online: Platformy cyfrowe umożliwiające komunikację i interakcje, takie jak Facebook, LinkedIn, Twitter, czy Instagram.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QModel \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QKażda z \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q krawędzi jest dodawana niezależnie.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QDla dużych \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q rozkład ten zbliża się do rozkładu Poissona o wartości oczekiwanej \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QŚrednia długość najkrótszej ścieżki: W miarę wzrostu liczby węzłów \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, średnia odległość między węzłami jest stosunkowo krótka, rzędu \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, co jest typowe dla tzw. efektu „małego świata”.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QModel ten został zaproponowany przez Albert-László Barabásiego i Rékę Albert w 1999 roku \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q i jest jednym z najważniejszych modeli do opisu sieci rzeczywistych, takich jak sieci społecznościowe, internet, sieci metaboliczne i wiele innych.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QInicjalizacja: Rozpocznij od małej sieci początkowej składającej się z \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q węzłów, które są połączone w pewien sposób.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QFormalnie, prawdopodobieństwo to wynosi: \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, gdzie \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q to stopień węzła \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, a suma w mianowniku przebiega przez wszystkie istniejące węzły w sieci.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QTesfatsion, L., & Judd, K. L. (Eds.).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QHandbook of Computational Economics: Agent-Based Computational Economics (Vol. 2).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QGenerative Social Science: Studies in Agent-Based Computational Modeling.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QPrinceton University Press.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QGrimm, V., & Railsback, S. F. (2005).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QIndividual-based Modeling and Ecology.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QAgent-based modeling: Methods and techniques for simulating human systems.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QProceedings of the National Academy of Sciences, 99(Suppl 3), 7280-7287.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QOxford University Press.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QOxford Concise Dictionary of Politics.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QMcLean, I. (1996).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QPolitical ideologies and the two-dimensional Nolan chart.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QBonabeau, E. (2002).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSmall Worlds: The Dynamics of Networks between Order and Randomness.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QThe Case for a Libertarian Political Party.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QThe Individualist, 1(4), 3-6.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QBoaz, D. (1997).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSocial Science Journal, 34(2), 217-228.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QDorogovtsev, S. N., & Mendes, J. F. F. (2002).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QEvolution of networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QAdvances in Physics, 51(4), 1079-1187.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QCollective dynamics of 'small-world' networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QNature, 393 (6684), 440-442.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QReviews of Modern Physics, 74(1), 47-97.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QBollobás, B. (2001).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QRandom Graphs (2nd ed.).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QCambridge University Press.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QBarabási, A.-L., & Albert, R. (1999).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QEmergence of Scaling in Random Networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QScience, 286 (5439), 509-512.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QStatistical mechanics of complex networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QAlbert, R., & Barabási, A.-L.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QOn Random Graphs I. Publicationes Mathematicae, 6, 290-297.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QErdős, P., & Rényi, A. (1959).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QPhysics Reports, 519(3), 97-125.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QTemporal networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QHolme, P., & Saramäki, J. (2012).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSocial Networks, 19(3), 243-269.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QNetwork analysis of two-mode data.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QBorgatti, S. P., & Everett, M. G. (1997).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSAGE Publications.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QUniversity of California.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSocial Network Analysis: A Handbook (2nd ed.).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QIntroduction to Social Network Methods.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QHanneman, R. A., & Riddle, M. (2005).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QCentrality in social networks: Conceptual clarification.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QProceedings of the National Academy of Sciences, 99(12), 7821-7826.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QGirvan, M., & Newman, M. E. J. (2002).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QCommunity structure in social and biological networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QNetworks: An Introduction.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSocial Networks, 1(3), 215-239.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QSocial Network Analysis: Methods and Applications.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QModelling disease outbreaks in realistic urban social networks.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QEubank, S., Guclu, H., Kumar, V. S. A., Marathe, M. V., Srinivasan, A., Toroczkai, Z., & Wang, N. (2004).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QProceedings of the National Academy of Sciences, 99 (Suppl 3), 7280-7287.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QNature, 429(6988), 180-184.\\E$"}
+{"rule":"SKROTY_Z_KROPKA","sentence":"^\\QModel sieci Watts-Strogatz (WS) jest jednym z kluczowych modeli do analizy zjawiska tzw. małego świata w sieciach.\\E$"}
+{"rule":"SKROTY_Z_KROPKA","sentence":"^\\QEfekt małego świata: Sieć WS stanowi pośrednią strukturę pomiędzy sieciami regularnymi (gdzie węzły są połączone według ustalonego wzorca) a sieciami losowymi (gdzie połączenia są tworzone przypadkowo).\\E$"}
+{"rule":"SKROTY_Z_KROPKA","sentence":"^\\QProces generowania sieci WS przebiega następująco:\\E$"}
+{"rule":"COFANIE_PRZECINKA","sentence":"^\\QPrzełączanie krawędzi: Dla każdej krawędzi łączącej węzeł \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q z węzłem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, losowo przełącz ją z prawdopodobieństwem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q na nową krawędź, łącząc \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q z losowo wybranym węzłem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, pod warunkiem, że nie ma już połączenia między \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q a \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QPrzełączanie krawędzi: Dla każdej krawędzi łączącej węzeł \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q z węzłem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, losowo przełącz ją z prawdopodobieństwem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q na nową krawędź, łącząc \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q z losowo wybranym węzłem \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, pod warunkiem, że nie ma już połączenia między \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q a \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\QParametr \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q kontroluje stopień losowości w sieci: Dla \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q sieć jest całkowicie regularna.\\E$"}
+{"rule":"SKROTY_Z_KROPKA","sentence":"^\\QMały świat: Sieci WS mają jednocześnie wysoki współczynnik klasteryzacji oraz krótką średnią długość najkrótszej ścieżki, co stanowi cechę „małego świata”.\\E$"}
+{"rule":"SKROTY_Z_KROPKA","sentence":"^\\QChociaż model WS odzwierciedla wiele cech rzeczywistych sieci, ma też pewne ograniczenia: Rozkład stopni węzłów: Sieć WS nie tworzy rozkładu potęgowego stopni węzłów, co ogranicza jej zdolność do odzwierciedlania struktur sieci o charakterze bezskalowym (scale-free networks).\\E$"}
+{"rule":"MORFOLOGIK_RULE_PL_PL","sentence":"^\\Qpra-cy\\E$"}
