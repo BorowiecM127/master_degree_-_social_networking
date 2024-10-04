@@ -30,27 +30,31 @@
 \contentsline {subsection}{\numberline {2.6.2}Opis diagramu Nolana}{15}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}Zastosowanie i znaczenie diagramu Nolana}{16}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}Krytyka diagramu Nolana}{16}{subsection.2.6.4}%
-\contentsline {chapter}{\numberline {3}Opis metod (algorytmy, założenia, warunki graniczne)}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Rozkład trójkątny}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Nowy modyfikator środka rozkładu}{18}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Opis technologii wykorzystanych w pracy}{19}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Opis implementacji}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Klasa Network}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Klasa Agent}{21}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}{23}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Model początkowy}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Pierwsze poprawki}{23}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{23}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{24}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Drugie poprawki}{24}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{24}{subsection.6.4.1}%
-\contentsline {subsubsection}{Sieć Barabasi-Albert}{25}{subsubsection*.1}%
-\contentsline {subsubsection}{Sieć Watts-Strogatz}{25}{subsubsection*.2}%
-\contentsline {subsubsection}{Sieć Erdos-Renyi}{25}{subsubsection*.3}%
-\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{25}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{27}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Analiza otrzymanych wyników}{31}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Podsumowanie}{33}{chapter.8}%
-\contentsline {chapter}{Spis tabel}{34}{chapter.8}%
-\contentsline {chapter}{Spis rysunk\'ow}{34}{chapter.8}%
-\contentsline {chapter}{Bibliografia}{35}{chapter*.4}%
+\contentsline {chapter}{\numberline {3}Praktyczna realizacja sieci społecznościowej}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Opis sieci społecznościowej}{17}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Opis działania agenta}{17}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Aktualizacja opinii agenta}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Modyfikatory środka rozkładu}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{Rozkład trójkątny}{18}{subsubsection*.1}%
+\contentsline {subsubsection}{Nowy modyfikator środka rozkładu}{18}{subsubsection*.2}%
+\contentsline {chapter}{\numberline {4}Opis technologii wykorzystanych w pracy}{21}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Opis implementacji}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Klasa Network}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Klasa Agent}{23}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Model początkowy}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pierwsze poprawki}{25}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{25}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Drugie poprawki}{26}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{26}{subsection.6.4.1}%
+\contentsline {subsubsection}{Sieć Barabasi-Albert}{27}{subsubsection*.3}%
+\contentsline {subsubsection}{Sieć Watts-Strogatz}{27}{subsubsection*.4}%
+\contentsline {subsubsection}{Sieć Erdos-Renyi}{27}{subsubsection*.5}%
+\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{27}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{29}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Analiza otrzymanych wyników}{33}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Podsumowanie}{35}{chapter.8}%
+\contentsline {chapter}{Spis tabel}{36}{chapter.8}%
+\contentsline {chapter}{Spis rysunk\'ow}{36}{chapter.8}%
+\contentsline {chapter}{Bibliografia}{37}{chapter*.6}%
