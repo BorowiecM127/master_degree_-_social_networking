@@ -13,7 +13,23 @@ Ponadto każdy agent powinien mieć właściwość zwaną elastycznością, któ
 % 2c. Z małym prawdopodobieństwem (wsp. konserwatyzmu) osobnik godzi się zmienić swoją opinię
 % 2d. Załóżmy, że istnieje parametr \beta na poziomie 0.1, takie, że zmianę pozycji osobnika losujemy na prostej od jego aktualnej pozycji do położenia średniego.
 %     Losujemy z rozkładu wykładniczego o średniej \beta*odległość(obiekt, średnia sąsiadów)
-Zaszła również potrzeba zmiany wzoru aktualizacji opinii, ponieważ poprzednia powodowała zbyt szybkie zbieganie opinii do jednego centrum.
+Zaszła również potrzeba zmiany rozkładu, z którego była losowana nowa opinia agenta, ponieważ poprzedni rozkład trójkątny powodował szybkie zbieganie opinii do jednego centrum.
+Wybór padł na rozkład wykładniczy.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Triangular_distribution_PMF.png}
+    \caption{Rozkład trójkątny. Źródło: \cite{rozklad_trojkatny_wykres}}
+    \label{fig:rozklad_trojkatny}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Exponential_distribution_pdf.png}
+    \caption{Rozkład wykładniczy. Źródło: \cite{rozklad_wykladniczy_wykres}}
+    \label{fig:rozklad_wykladniczy}
+\end{figure}
+
+\newpage
 
 \subsection{Zmieniona implementacja}
 
