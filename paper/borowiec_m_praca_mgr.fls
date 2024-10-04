@@ -1185,6 +1185,7 @@ INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-l
 INPUT .\borowiec_m_praca_mgr.toc
 INPUT borowiec_m_praca_mgr.toc
 INPUT borowiec_m_praca_mgr.toc
+INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 OUTPUT borowiec_m_praca_mgr.toc
 INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmro12.tfm
 INPUT .\sections\0201_czym_jest_ABM.tex
@@ -1196,7 +1197,6 @@ INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr12.tfm
-INPUT C:\Users\Koperek127\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT .\sections\0202_sieci_spolecznosciowe.tex
 INPUT sections\0202_sieci_spolecznosciowe.tex
 INPUT .\sections\0202_sieci_spolecznosciowe.tex
@@ -1245,6 +1245,20 @@ INPUT .\sections\0602_pierwsze_poprawki.tex
 INPUT sections\0602_pierwsze_poprawki.tex
 INPUT .\sections\0602_pierwsze_poprawki.tex
 INPUT sections\0602_pierwsze_poprawki.tex
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT img\Triangular_distribution_PMF.png
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT .\img\Triangular_distribution_PMF.png
+INPUT .\img\Exponential_distribution_pdf.png
+INPUT .\img\Exponential_distribution_pdf.png
+INPUT img\Exponential_distribution_pdf.png
+INPUT .\img\Exponential_distribution_pdf.png
+INPUT .\img\Exponential_distribution_pdf.png
+INPUT .\img\Exponential_distribution_pdf.png
+INPUT .\img\Exponential_distribution_pdf.png
 INPUT .\sections\0603_rozwiniecie_badan.tex
 INPUT sections\0603_rozwiniecie_badan.tex
 INPUT .\sections\0603_rozwiniecie_badan.tex

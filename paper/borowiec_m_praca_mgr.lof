@@ -5,13 +5,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Watts-Strogatz}}{28}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Barabasi-Albert}}{28}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Erdos-Renyi}}{29}{figure.6.3}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces watts strogatz 10 20 8 student}}{29}{figure.6.4}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces barabasi albert 2 20 2 student}}{30}{figure.6.5}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces barabasi albert 2 50 2 student}}{30}{figure.6.6}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces erdos renyi 10 50 8 student}}{30}{figure.6.7}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces watts strogatz 10 20 7 student}}{31}{figure.6.8}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Rozkład trójkątny. Źródło: \cite {rozklad_trojkatny_wykres}}}{26}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Rozkład wykładniczy. Źródło: \cite {rozklad_wykladniczy_wykres}}}{26}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Watts-Strogatz}}{29}{figure.6.3}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Barabasi-Albert}}{30}{figure.6.4}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Erdos-Renyi}}{30}{figure.6.5}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces watts strogatz 10 20 8 student}}{31}{figure.6.6}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces barabasi albert 2 20 2 student}}{31}{figure.6.7}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces barabasi albert 2 50 2 student}}{32}{figure.6.8}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces erdos renyi 10 50 8 student}}{32}{figure.6.9}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces watts strogatz 10 20 7 student}}{32}{figure.6.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

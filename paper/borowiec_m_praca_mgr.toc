@@ -44,15 +44,15 @@
 \contentsline {chapter}{\numberline {6}Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Model początkowy}{25}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pierwsze poprawki}{25}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{25}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{26}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Drugie poprawki}{26}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{26}{subsection.6.4.1}%
-\contentsline {subsubsection}{Sieć Barabasi-Albert}{27}{subsubsection*.3}%
-\contentsline {subsubsection}{Sieć Watts-Strogatz}{27}{subsubsection*.4}%
-\contentsline {subsubsection}{Sieć Erdos-Renyi}{27}{subsubsection*.5}%
-\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{27}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{29}{section.6.6}%
+\contentsline {subsection}{\numberline {6.2.1}Zmieniona implementacja}{27}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Rozwinięcie badań}{27}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Drugie poprawki}{27}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Wyniki dla zwykłej średniej i średniej ważonej}{28}{subsection.6.4.1}%
+\contentsline {subsubsection}{Sieć Barabasi-Albert}{28}{subsubsection*.3}%
+\contentsline {subsubsection}{Sieć Watts-Strogatz}{28}{subsubsection*.4}%
+\contentsline {subsubsection}{Sieć Erdos-Renyi}{29}{subsubsection*.5}%
+\contentsline {section}{\numberline {6.5}Współczynnik modyfikujący średnią rozkładu}{29}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Analiza różnych współczynników modyfikujących średnią rozkładu}{31}{section.6.6}%
 \contentsline {chapter}{\numberline {7}Analiza otrzymanych wyników}{33}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Podsumowanie}{35}{chapter.8}%
 \contentsline {chapter}{Spis tabel}{36}{chapter.8}%
