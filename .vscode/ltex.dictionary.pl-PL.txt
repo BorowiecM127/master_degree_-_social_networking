@@ -47,3 +47,4 @@ Ina4
 Ina1
 Dummy14
 klasteryzację
+Ina0

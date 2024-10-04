@@ -1,0 +1,28 @@
+\section{Współczynnik modyfikujący średnią rozkładu}
+
+Dodatkowy współczynnik modyfikujący średnią rozkładu został dodany do funkcji aktualizującej opinię danego agenta.
+Okazało się, że współczynnik wynoszący 500 jest odpowiedni dla uzyskania więcej niż jednej zbieżnej grupy, przynajmniej dla sieci Wattsa-Strogatza i Barabasi-Alberta.
+W przypadku Erdos-Renyi nie powstaje więcej niż jedna grupa, prędzej pojawiają się "orbitujące" elementy populacji, znacznie oddalone od głównej grupy.
+Dla mniejszych współczynników populacja jest zbieżna do jednej grupy, a dla większych elementy przestają się grupować.
+Przykładowe rezultaty widoczne są poniżej.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Watts-Strogatz.png}
+    \caption{Watts-Strogatz}
+    \label{fig:Watts-Strogatz}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Barabasi-Albert.png}
+    \caption{Barabasi-Albert}
+    \label{fig:Barabasi-Albert}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Erdos-Renyi.png}
+    \caption{Erdos-Renyi}
+    \label{fig:Erdos-Renyi}
+\end{figure}
