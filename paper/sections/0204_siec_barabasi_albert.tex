@@ -1,51 +1,113 @@
 \section{Sieć Barabási-Albert}
 Model Barabási-Albert (BA) to model sieci bezskalowej, gdzie stopnie węzłów podążają za rozkładem potęgowym.
-Model ten został zaproponowany przez Albert-László Barabásiego i Rékę Albert w 1999 roku \cite{Barabasi1999} i jest jednym z najważniejszych modeli do opisu sieci rzeczywistych,
+Model ten został zaproponowany przez Alberta-László Barabásiego i Rékę Alberta w 1999 roku \cite{Barabasi1999} i jest jednym z najważniejszych modeli do opisu sieci rzeczywistych,
 takich jak sieci społecznościowe, internet, sieci metaboliczne i wiele innych.
 
 \subsection{Założenia modelu Barabási-Albert}
 Model BA opiera się na dwóch kluczowych mechanizmach:
 
 \begin{itemize}
-    \item \textbf{Preferencyjne przyłączanie:} Nowe węzły mają większe prawdopodobieństwo połączenia się z węzłami, które już mają wiele połączeń.
-          Oznacza to, że „bogaci stają się bogatsi” - węzły o wysokim stopniu przyciągają więcej nowych połączeń.
-    \item \textbf{Wzrost:} Sieć rozwija się w czasie, przy czym do istniejącej sieci dodawane są nowe węzły, które tworzą połączenia z już istniejącymi węzłami.
+      \item \textbf{Preferencyjne przyłączanie:} Nowe węzły mają większe prawdopodobieństwo połączenia się z węzłami, które już mają wiele połączeń.
+            \\ Oznacza to, że „bogaci stają się bogatsi” - węzły o wysokim stopniu przyciągają więcej nowych połączeń.
+      \item \textbf{Wzrost:} Sieć rozwija się w czasie, przy czym do istniejącej sieci dodawane są nowe węzły, które tworzą połączenia z już istniejącymi węzłami.
 \end{itemize}
 
 \subsection{Algorytm generowania sieci Barabási-Albert}
 Proces budowania sieci BA jest następujący:
 
 \begin{enumerate}
-    \item \textbf{Inicjalizacja:} Rozpocznij od małej sieci początkowej składającej się z $m_0$ węzłów, które są połączone w pewien sposób.
-    \item \textbf{Dodawanie nowego węzła:} Na każdym kroku dodawany jest nowy węzeł, który tworzy $m \leq m_0$ krawędzi łączących go z już istniejącymi węzłami.
-    \item \textbf{Preferencyjne przyłączanie:} Prawdopodobieństwo, że nowy węzeł połączy się z istniejącym węzłem $i$, jest proporcjonalne do stopnia węzła $k_i$. Formalnie, prawdopodobieństwo to wynosi:
-          \[
-              \Pi(k_i) = \frac{k_i}{\sum_{j} k_j},
-          \]
-          gdzie $k_i$ to stopień węzła $i$, a suma w mianowniku przebiega przez wszystkie istniejące węzły w sieci.
+      \item \textbf{Inicjalizacja:} Rozpocznij od małej sieci początkowej składającej się z $m_0$ węzłów, które są połączone w pewien sposób.
+      \item \textbf{Dodawanie nowego węzła:} Na każdym kroku dodawany jest nowy węzeł, który tworzy $m \leq m_0$ krawędzi łączących go z już istniejącymi węzłami.
+      \item \textbf{Preferencyjne przyłączanie:} Prawdopodobieństwo, że nowy węzeł połączy się z istniejącym węzłem $i$, jest proporcjonalne do stopnia węzła $k_i$. Formalnie, prawdopodobieństwo to wynosi:
+            \begin{equation}
+                  \Pi(k_i) = \frac{k_i}{\sum_{j} k_j}
+                  \label{eq:preferential-attachment-probability}
+            \end{equation}
+            gdzie $k_i$ to stopień węzła $i$, a suma w mianowniku przebiega przez wszystkie istniejące węzły w sieci.
 \end{enumerate}
 
 Proces ten jest kontynuowany, aż sieć osiągnie oczekiwaną liczbę węzłów.
 
 \subsection{Właściwości sieci Barabási-Albert}
+Model Barabási-Albert opisuje sposób, w jaki sieci rozwijają się zgodnie z zasadą preferencyjnego przyłączania. Model ten ma pewne charakterystyczne właściwości:
+
 \begin{itemize}
-    \item \textbf{Rozkład skali:} W sieciach generowanych według modelu BA rozkład stopni węzłów podlega prawu potęgowemu, tj. $P(k) \sim k^{-3}$.
-          Oznacza to, że większość węzłów ma niewielką liczbę połączeń, ale istnieje niewielka liczba węzłów (tzw. hubów) o bardzo wysokim stopniu.
-    \item \textbf{Efekt małego świata:} Sieci BA, podobnie jak rzeczywiste sieci, mają stosunkowo małą średnią odległość między węzłami.
-    \item \textbf{Preferencyjne przyłączanie:} Mechanizm ten prowadzi do tworzenia hubów, które dominują w strukturze sieci.
+      \item \textbf{Preferencyjne przyłączanie:} Nowo dodawane węzły mają większe prawdopodobieństwo połączenia się z węzłami, które już mają dużą liczbę połączeń.
+            Oznacza to, że węzły z większą liczbą połączeń (tzw. huby) rosną szybciej, co prowadzi do tworzenia się kilku bardzo dobrze połączonych węzłów w sieci \cite{Barabasi1999}.
+
+      \item \textbf{Rozkład potęgowy stopni węzłów:} Stopnie węzłów w sieci BA (liczba połączeń węzła) podążają za rozkładem potęgowym.
+            \\ Oznacza to, że większość węzłów ma niewiele połączeń, ale istnieje niewielka liczba węzłów o bardzo dużej liczbie połączeń.
+            Rozkład ten charakteryzuje się rzadkim występowaniem węzłów o bardzo wysokim stopniu, co opisuje wzór:
+            \begin{equation}
+                  P(k) \sim k^{-\gamma}
+                  \label{eq:power-law-probability}
+            \end{equation}
+            gdzie $P(k)$ jest prawdopodobieństwem, że węzeł ma $k$ połączeń, a $\gamma$ jest parametrem rozkładu, zwykle w przybliżeniu równym 3 \cite{Barabasi1999}.
+
+      \item \textbf{Skalowalność:} Sieci BA są \textit{skalowalne}, co oznacza, że właściwości topologiczne sieci nie zależą od jej wielkości.
+            Wzorce łączenia się węzłów pozostają podobne niezależnie od liczby węzłów w sieci, a sieć rozwija się zgodnie z tymi samymi regułami, niezależnie od jej rozmiaru \cite{Newman2003}.
+
+      \item \textbf{Bezskalowość:} Sieci BA są sieciami \textit{bezskalowymi}, co oznacza, że nie ma typowego rozmiaru węzła (stopnia węzła).
+            Dominują węzły o małej liczbie połączeń, ale możliwe jest istnienie węzłów o bardzo wysokim stopniu, co różni je od sieci losowych z rozkładem Poissona \cite{Albert2002}.
+
+      \item \textbf{Odporność na uszkodzenia losowe:} Sieci o strukturze BA są stosunkowo odporne na losowe usunięcie węzłów.
+            Nawet po usunięciu dużej liczby losowo wybranych węzłów, sieć może nadal funkcjonować, ponieważ większość węzłów ma niewielką liczbę połączeń.
+            Jednak sieć jest podatna na ukierunkowane ataki na huby, ponieważ ich usunięcie może prowadzić do fragmentacji sieci \cite{Albert2000}.
 \end{itemize}
 
 \subsection{Zastosowania sieci Barabási-Albert}
 Model BA dobrze opisuje strukturę wielu rzeczywistych sieci, w tym:
 \begin{itemize}
-    \item \textbf{Sieci internetowe:} Węzły reprezentują strony internetowe, a krawędzie — linki między nimi. Występuje kilka stron (hubów) mających bardzo dużą liczbę połączeń.
-    \item \textbf{Sieci społecznościowe:} Węzły reprezentują osoby, a krawędzie ich relacje społeczne. Niektóre osoby (np. celebryci) mają znacznie więcej połączeń niż inne.
-    \item \textbf{Sieci biologiczne:} W sieciach metabolicznych czy sieciach interakcji białek obserwuje się strukturę skali bez charakterystycznej wielkości.
+      \item \textbf{Sieci internetowe:} Węzły reprezentują strony internetowe, a krawędzie — linki między nimi. Występuje kilka stron (hubów) mających bardzo dużą liczbę połączeń.
+      \item \textbf{Sieci społecznościowe:} Węzły reprezentują osoby, a krawędzie ich relacje społeczne. Niektóre osoby (np. celebryci) mają znacznie więcej połączeń niż inne.
+      \item \textbf{Sieci biologiczne:} W sieciach metabolicznych czy sieciach interakcji białek obserwuje się strukturę skali bez charakterystycznej wielkości.
+
+      \item \textbf{Internet i sieci komputerowe:} Internet można modelować jako sieć BA, gdzie węzły reprezentują routery lub serwery, a krawędzie – połączenia między nimi.
+            Zasada preferencyjnego przyłączania dobrze odzwierciedla sposób, w jaki nowe witryny internetowe łączą się z popularnymi stronami, tworząc kilka hubów,
+            które odpowiadają głównym węzłom sieciowym \cite{Barabasi2003}.
+
+      \item \textbf{Biologia i sieci metaboliczne:} Sieci BA mają zastosowanie w biologii, zwłaszcza w analizie sieci metabolicznych organizmów, gdzie metabolity (węzły) są połączone reakcjami enzymatycznymi (krawędzie).
+            Takie sieci również wykazują rozkład potęgowy, z kilkoma metabolitami o bardzo dużej liczbie połączeń, co sprawia, że sieci metaboliczne są odporne na przypadkowe zakłócenia \cite{Jeong2000}.
+
+      \item \textbf{Ekonomia i finanse:} Model BA jest używany do opisu systemów ekonomicznych, takich jak sieci handlowe, gdzie firmy, instytucje finansowe lub rynki są węzłami, a ich wzajemne relacje, jak np. kontrakty, to krawędzie.
+            \\ W tych systemach preferencyjne przyłączanie odzwierciedla, jak większe firmy przyciągają więcej partnerów biznesowych, tworząc sieci z rozkładem potęgowym \cite{Battiston2007}.
+
+      \item \textbf{Nauka i sieci cytowań:} W badaniach naukowych model BA jest wykorzystywany do opisu sieci cytowań, gdzie węzłami są artykuły naukowe, a krawędzie oznaczają cytowania między nimi.
+            Starsze, bardziej cytowane artykuły są częściej cytowane przez nowe prace, co tworzy strukturę sieci z kilkoma bardzo często cytowanymi artykułami w roli hubów \cite{Price1976}.
+
+      \item \textbf{Media społecznościowe:} Sieci BA są również stosowane w analizie sieci społecznościowych, takich jak Facebook, Twitter czy LinkedIn.
+            Użytkownicy tych platform (węzły) tworzą połączenia (krawędzie) z innymi użytkownikami, a zasada preferencyjnego przyłączania powoduje, że popularni użytkownicy (huby) zdobywają jeszcze więcej połączeń,
+            co prowadzi do powstawania struktur bezskalowych \cite{Leskovec2008}.
+            \newpage
+
+      \item \textbf{Propagacja informacji i epidemie:} Sieci BA znajdują zastosowanie w modelowaniu rozprzestrzeniania się informacji lub chorób w sieciach społecznych.
+            Model BA może symulować, jak epidemie lub plotki szybko rozprzestrzeniają się przez kilka kluczowych węzłów (osób o wysokiej liczbie połączeń),
+            co pomaga w opracowywaniu strategii kontroli lub przewidywania rozwoju epidemii \cite{Pastor2001}.
 \end{itemize}
 
 \subsection{Ograniczenia modelu Barabási-Albert}
 Mimo że model BA jest użyteczny, ma pewne ograniczenia:
+
 \begin{itemize}
-    \item \textbf{Słaba klasteryzacja:} Sieci BA mają niższy współczynnik klasteryzacji niż obserwowane w rzeczywistych sieciach.
-    \item \textbf{Mała różnorodność w ewolucji sieci:} Model zakłada jeden mechanizm wzrostu, co jest zbyt uproszczone w porównaniu z rzeczywistymi sieciami, które mogą rozwijać się na wiele sposobów.
+      \item \textbf{Zbyt uproszczona struktura sieci:} Model BA zakłada, że nowe węzły łączą się tylko na podstawie preferencyjnego przyłączania,
+            gdzie prawdopodobieństwo połączenia się z istniejącym węzłem zależy od liczby jego połączeń.
+            \\ W rzeczywistych sieciach istnieje jednak wiele innych czynników wpływających na tworzenie połączeń, takich jak geografia, interesy, zasoby, które model BA ignoruje \cite{Newman2003}.
+
+      \item \textbf{Brak heterogeniczności w węzłach:} W modelu BA wszystkie węzły są traktowane jako jednorodne i mają te same właściwości poza liczbą połączeń.
+            W rzeczywistości węzły różnią się wieloma cechami, takimi jak zdolności przetwarzania informacji, rola w sieci, czy preferencje, co może wpływać na sposób, w jaki tworzą połączenia \cite{Klemm2002}.
+
+      \item \textbf{Brak uwzględnienia ograniczeń topologicznych:} W modelu BA nie ma ograniczeń dotyczących liczby połączeń, które może mieć węzeł.
+            \\ W rzeczywistych sieciach, takich jak sieci społeczne czy biologiczne, istnieją fizyczne lub społeczne ograniczenia na liczbę relacji, które jeden węzeł może utrzymywać, co model BA pomija \cite{Amaral2000}.
+
+      \item \textbf{Zbyt prosty mechanizm wzrostu:} Sieci rzeczywiste rozwijają się często w sposób bardziej złożony, niż sugeruje to model BA.
+            Wiele sieci rozwija się nie tylko poprzez przyłączanie nowych węzłów do istniejących, ale także poprzez usuwanie węzłów, zmiany w strukturze połączeń,
+            czy tworzenie nowych krawędzi między istniejącymi węzłami, czego model BA nie uwzględnia \cite{Dorogovtsev2002}.
+
+      \item \textbf{Nierealność preferencyjnego przyłączania w pewnych kontekstach:} Zasada preferencyjnego przyłączania, na której opiera się model BA,
+            zakłada, że węzły z większą liczbą połączeń zawsze przyciągają więcej nowych połączeń.
+            W wielu przypadkach, np. w sieciach społecznych lub ekonomicznych, inne czynniki,
+            takie jak reputacja, dostępność lub jakość zasobów, mogą odgrywać większą rolę niż sama liczba połączeń \cite{Boccaletti2006}.
+
+      \item \textbf{Brak dynamiki krawędzi:} W modelu BA nowe węzły dodają nowe krawędzie, ale nie ma możliwości modyfikowania istniejących połączeń ani usuwania starych.
+            W rzeczywistych sieciach krawędzie mogą zanikać, np. w wyniku przestarzałych kontaktów, zmian w interesach lub rozwoju technologii \cite{Holme2002}.
 \end{itemize}

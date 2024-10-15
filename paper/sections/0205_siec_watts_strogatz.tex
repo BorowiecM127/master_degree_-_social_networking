@@ -6,9 +6,9 @@ Model ten pozwala generować sieci, które łączą w sobie cechy zarówno sieci
 \subsection{Cechy modelu Watts-Strogatz}
 Sieci Watts-Strogatz charakteryzują się następującymi właściwościami:
 \begin{itemize}
-    \item \textbf{Krótka średnia ścieżka:} Węzły są od siebie oddzielone przez stosunkowo małą liczbę połączeń, co jest charakterystyczne dla sieci „małego świata”.
-    \item \textbf{Wysoki współczynnik klasteryzacji:} Węzły są silnie połączone z sąsiadami, tworząc lokalne grupy (kliki), co odpowiada klasteryzacji obserwowanej w rzeczywistych sieciach.
-    \item \textbf{Efekt małego świata:} Sieć WS stanowi pośrednią strukturę pomiędzy sieciami regularnymi (gdzie węzły są połączone według ustalonego wzorca) a sieciami losowymi (gdzie połączenia są tworzone przypadkowo).
+    \item \textbf{Krótka średnia ścieżka:} Węzły są od siebie oddzielone przez stosunkowo małą liczbę połączeń, co jest charakterystyczne dla sieci „małego świata” \cite{Watts1998}.
+    \item \textbf{Wysoki współczynnik klasteryzacji:} Węzły są silnie połączone z sąsiadami, tworząc lokalne grupy (kliki), co odpowiada klasteryzacji obserwowanej w rzeczywistych sieciach \cite{Watts1998}.
+    \item \textbf{Efekt małego świata:} Sieć Watts-Strogatz stanowi pośrednią strukturę pomiędzy sieciami regularnymi (gdzie węzły są połączone według ustalonego wzorca) a sieciami losowymi (gdzie połączenia są tworzone przypadkowo) \cite{Watts1998}.
 \end{itemize}
 
 \subsection{Algorytm generowania sieci Watts-Strogatz}
@@ -29,23 +29,26 @@ Parametr $p$ kontroluje stopień losowości w sieci:
 \end{itemize}
 
 \subsection{Właściwości sieci Watts-Strogatz}
+Sieci Watts-Strogatz charakteryzują się następującymi właściwościami:
 \begin{itemize}
-    \item \textbf{Współczynnik klasteryzacji:} Dla niewielkich wartości $p$ sieć ma współczynnik klasteryzacji podobny do sieci regularnej.
-    \item \textbf{Średnia długość najkrótszej ścieżki:} Nawet dla małych wartości $p$, średnia długość najkrótszej ścieżki w sieci spada gwałtownie, zbliżając się do wartości typowej dla sieci losowej.
-    \item \textbf{Mały świat:} Sieci WS mają jednocześnie wysoki współczynnik klasteryzacji oraz krótką średnią długość najkrótszej ścieżki, co stanowi cechę „małego świata”.
+    \item \textbf{Krótka średnia ścieżka:} Węzły są od siebie oddzielone przez stosunkowo małą liczbę połączeń,
+          co jest charakterystyczne dla sieci „małego świata” \cite{Watts1998}.
+    \item \textbf{Wysoki współczynnik klasteryzacji:} Węzły są silnie połączone z sąsiadami, tworząc lokalne grupy (kliki),
+          co odpowiada klasteryzacji obserwowanej w rzeczywistych sieciach \cite{Watts1998}.
+    \item \textbf{Efekt małego świata:} Sieć Watts-Strogatz stanowi pośrednią strukturę pomiędzy sieciami regularnymi (gdzie węzły są połączone według ustalonego wzorca) a sieciami losowymi (gdzie połączenia są tworzone przypadkowo) \cite{Watts1998}.
 \end{itemize}
 
 \subsection{Zastosowania sieci Watts-Strogatz}
 Model Watts-Strogatz jest wykorzystywany do analizy i modelowania struktur sieciowych w różnych dziedzinach, takich jak:
 \begin{itemize}
-    \item \textbf{Sieci społecznościowe:} W sieciach społecznościowych znajomi często tworzą małe, silnie powiązane grupy, ale istnieją także połączenia z osobami spoza tych grup.
-    \item \textbf{Sieci biologiczne:} Występuje w neuronowych sieciach mózgowych, gdzie niektóre neurony są bardziej skłonne do połączeń w lokalnych regionach, ale mają także połączenia do odległych obszarów.
-    \item \textbf{Sieci komunikacyjne i transportowe:} Takie jak sieci elektryczne czy sieci lotnicze, które mają zarówno krótkie lokalne, jak i długodystansowe połączenia.
+    \item \textbf{Sieci społecznościowe:} W sieciach społecznościowych znajomi często tworzą małe, silnie powiązane grupy, ale istnieją także połączenia z osobami spoza tych grup \cite{Watts1998}.
+    \item \textbf{Sieci biologiczne:} Występuje w neuronowych sieciach mózgowych, gdzie niektóre neurony są bardziej skłonne do połączeń w lokalnych regionach, ale mają także połączenia do odległych obszarów \cite{Sporns2004}.
+    \item \textbf{Sieci komunikacyjne i transportowe:} Takie jak sieci elektryczne czy sieci lotnicze, które mają zarówno krótkie lokalne, jak i długodystansowe połączenia \cite{Barrat2004}.
 \end{itemize}
 
 \subsection{Ograniczenia modelu Watts-Strogatz}
-Chociaż model WS odzwierciedla wiele cech rzeczywistych sieci, ma też pewne ograniczenia:
+Chociaż model Watts-Strogatz odzwierciedla wiele cech rzeczywistych sieci, ma też pewne ograniczenia:
 \begin{itemize}
-    \item \textbf{Rozkład stopni węzłów:} Sieć WS nie tworzy rozkładu potęgowego stopni węzłów, co ogranicza jej zdolność do odzwierciedlania struktur sieci o charakterze bezskalowym.
-    \item \textbf{Brak różnorodności w ewolucji sieci:} Model nie uwzględnia mechanizmu preferencyjnego przyłączania, który jest kluczowy w wielu rzeczywistych sieciach.
+    \item \textbf{Rozkład stopni węzłów:} Sieć Watts-Strogatz nie tworzy rozkładu potęgowego stopni węzłów, co ogranicza jej zdolność do odzwierciedlania struktur sieci o charakterze bezskalowym \cite{Barabasi1999}.
+    \item \textbf{Brak różnorodności w ewolucji sieci:} Model nie uwzględnia mechanizmu preferencyjnego przyłączania, który jest kluczowy w wielu rzeczywistych sieciach \cite{Newman2003}.
 \end{itemize}
