@@ -3,17 +3,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Rozkład trójkątny. Źródło: \cite {rozklad_trojkatny_wykres}}}{26}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Rozkład wykładniczy. Źródło: \cite {rozklad_wykladniczy_wykres}}}{26}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Watts-Strogatz}}{29}{figure.6.3}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Barabasi-Albert}}{30}{figure.6.4}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Erdos-Renyi}}{30}{figure.6.5}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces watts strogatz 10 20 8 student}}{31}{figure.6.6}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces barabasi albert 2 20 2 student}}{31}{figure.6.7}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces barabasi albert 2 50 2 student}}{32}{figure.6.8}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces erdos renyi 10 50 8 student}}{32}{figure.6.9}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces watts strogatz 10 20 7 student}}{32}{figure.6.10}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rozkład trójkątny. Źródło: \cite {rozklad_trojkatny_wykres}}}{24}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rozkład wykładniczy. Źródło: \cite {rozklad_wykladniczy_wykres}}}{25}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sieć Watts-Strogatz w iteracji nr 50}}{25}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sieć Barabási-Albert w iteracji nr 50}}{26}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Sieć Erdős-Rényi w iteracji nr 50}}{26}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Sieć Watts-Strogatz, parametr aktualizacji: 10, populacja: 20}}{27}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Sieć Barabási-Albert, parametr aktualizacji: 2, populacja: 20}}{27}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Sieć Barabási-Albert, parametr aktualizacji: 2, populacja: 50}}{28}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Sieć Erdős-Rényi, parametr aktualizacji: 10, populacja: 50}}{28}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Sieć Watts-Strogatz, parametr aktualizacji: 10, populacja: 20}}{28}{figure.4.10}%
 \addvspace {10\p@ }

@@ -1,33 +1,26 @@
 \section{Sieci społecznościowe}
 Sieci społecznościowe to struktury złożone z jednostek (węzłów) oraz powiązań między nimi (krawędzi), które modelują relacje społeczne lub interakcje pomiędzy różnymi podmiotami.
-Jednostkami w takich sieciach mogą być osoby, organizacje, grupy społeczne lub inne podmioty,
+\\ Jednostkami w takich sieciach mogą być osoby, organizacje, grupy społeczne lub inne podmioty,
 a relacje między nimi mogą obejmować przyjaźnie, współpracę, przepływ informacji, wpływy lub inne formy interakcji społecznych.
 
 \subsection{Elementy sieci społecznościowych}
-\begin{itemize}
-    \item \textbf{Węzły:} Każdy węzeł reprezentuje pojedynczego aktora lub podmiot w sieci.
-          Może to być osoba, organizacja, społeczność, a nawet kraj w zależności od analizowanego systemu \cite{Wasserman1994}.
-    \item \textbf{Krawędzie:} Krawędzie łączą węzły i reprezentują relacje lub interakcje między nimi.
-          Krawędzie mogą być skierowane (kierunek relacji ma znaczenie) lub nieskierowane (relacja symetryczna) \cite{Newman2010}.
-    \item \textbf{Wagi:} Krawędzie mogą być dodatkowo opatrzone wagami, które wskazują na siłę lub intensywność relacji między węzłami.
-          Na przykład, w sieci znajomości wagi mogą odzwierciedlać częstotliwość interakcji.
-    \item \textbf{Grupy:} Sieci często wykazują pewne struktury, w których węzły są bardziej gęsto połączone ze sobą niż z innymi częściami sieci, tworząc tzw. społeczności \cite{Girvan2002}.
-    \item \textbf{Centralność:} Niektóre węzły w sieci mogą odgrywać bardziej centralną rolę, np. poprzez łączenie wielu innych węzłów lub pośrednictwo w przepływie informacji \cite{Freeman1979}.
-\end{itemize}
+Sieci społecznościowe można opisywać i analizować za pomocą teorii grafów, gdzie węzły odpowiadają aktorom społecznym, a krawędzie – relacjom między nimi \cite{Wasserman1994}.
+\\ W teorii grafów sieć społeczna jest grafem, który może być skierowany lub nieskierowany, w zależności od tego, czy relacje między węzłami są wzajemne, oraz ważony, gdy krawędzie mają przypisane wartości liczbowe,
+odzwierciedlające np. siłę lub intensywność relacji między węzłami. Na przykład, w sieci znajomości wagi mogą odzwierciedlać częstotliwość interakcji.
+\\ Sieci często wykazują pewne struktury, w których węzły są bardziej gęsto połączone ze sobą niż z innymi częściami sieci, tworząc tzw. społeczności \cite{Girvan2002}.
+\\ Niektóre węzły w sieci mogą odgrywać również bardziej centralną rolę, np. poprzez łączenie wielu innych węzłów lub pośrednictwo w przepływie informacji \cite{Freeman1979}.
 
 \subsection{Rodzaje sieci społecznościowych}
 \begin{itemize}
-    \item \textbf{Sieci egocentryczne:} Sieci, które koncentrują się na pojedynczym węźle (osobie lub organizacji) oraz jego bezpośrednich połączeniach.
-          Analiza takiej sieci pokazuje, jak jednostka jest powiązana z innymi aktorami \cite{Hanneman2005}.
-    \item \textbf{Sieci pełne:} Sieci, które obejmują całą grupę lub populację i badają relacje pomiędzy wszystkimi jednostkami w tej grupie.
-          Są one szczególnie użyteczne do analizy struktur globalnych, takich jak hierarchie czy przepływy informacji \cite{Scott2000}.
-    \item \textbf{Sieci jednopoziomowe:} W tego rodzaju sieciach każdy węzeł reprezentuje ten sam typ jednostek, np. osoby lub organizacje,
-          a krawędzie to relacje między nimi \cite{Newman2010}.
-    \item \textbf{Sieci dwupoziomowe:} Sieci te zawierają dwa typy węzłów, np. osoby i wydarzenia, a krawędzie reprezentują uczestnictwo danej osoby w wydarzeniu \cite{Borgatti1997}.
-    \item \textbf{Sieci dynamiczne:} Sieci, w których relacje między węzłami mogą zmieniać się w czasie.
-          Tego typu sieci są szczególnie przydatne w badaniu ewolucji grup społecznych, migracji czy zmian w przepływie informacji \cite{Holme2012}.
+      \item \textbf{Sieci egocentryczne:} Sieci, które koncentrują się na pojedynczym węźle (osobie lub organizacji) oraz jego bezpośrednich połączeniach.
+            \\ Analiza takiej sieci pokazuje, jak jednostka jest powiązana z innymi aktorami \cite{Hanneman2005}.
+      \item \textbf{Sieci pełne:} Sieci, które obejmują całą grupę lub populację i badają relacje pomiędzy wszystkimi jednostkami w tej grupie.
+            \\ Są one szczególnie użyteczne do analizy struktur globalnych, takich jak hierarchie czy przepływy informacji \cite{Scott2000}.
+      \item \textbf{Sieci jednopoziomowe:} W tego rodzaju sieciach każdy węzeł reprezentuje ten sam typ jednostek, np. osoby lub organizacje,
+            a krawędzie to relacje między nimi \cite{Newman2010}.
+      \item \textbf{Sieci dwupoziomowe:} Sieci te zawierają dwa typy węzłów, np. osoby i wydarzenia, a krawędzie reprezentują uczestnictwo danej osoby w wydarzeniu \cite{Borgatti1997}.
+      \item \textbf{Sieci dynamiczne:} Sieci, w których relacje między węzłami mogą zmieniać się w czasie.
+            \\ Tego typu sieci są szczególnie przydatne w badaniu ewolucji grup społecznych, migracji czy zmian w przepływie informacji \cite{Holme2012}.
 \end{itemize}
 
-W kontekście analizy sieci społecznych często stosuje się matematyczne podejścia oparte na teorii grafów.
-W tym podejściu węzły grafu reprezentują jednostki społeczne, a krawędzie — relacje między nimi (np. przyjaźnie, kontakty, współpracę).
 W pracy przeanalizowane zostaną najważniejsze modele losowych grafów: model Erdős-Rényi, model Barabási-Albert, oraz model Watts–Strogatz.

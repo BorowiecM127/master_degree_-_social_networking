@@ -22,8 +22,10 @@
 \usepackage{listings}
 \usepackage[most]{tcolorbox}
 \usepackage{hyphenat}
+\usepackage{pdfpages}
 
 \hyphenation{pra-cy}
+\setlength{\headheight}{16pt}
 
 \begin{document}
 
@@ -57,32 +59,22 @@
 \chapter{Praktyczna realizacja sieci społecznościowej}
 
 \input{sections/0301_opis_systemu.tex}
-\input{sections/0302_ewolucja_systemu.tex}
+\input{sections/0303_technologie_w_pracy.tex}
 
-\chapter{Opis technologii wykorzystanych w pracy}
+\chapter{Symulacje i analiza wyników}
 
-\input{sections/0401_technologie_w_pracy.tex}
-
-\chapter{Opis implementacji}
-
-\input{sections/0501_klasa_network.tex}
-\input{sections/0502_klasa_agent.tex}
-
-\chapter{Opis wykonanych w ramach pracy badań, symulacji, eksperymentów}
-
-\input{sections/0601_model_wyjsciowy.tex}
-\input{sections/0602_pierwsze_poprawki.tex}
-\input{sections/0603_rozwiniecie_badan.tex}
-\input{sections/0604_drugie_poprawki.tex}
-\input{sections/0605_wspolczynnik_modyfikujacy_srednia_rozkladu.tex}
-\input{sections/0606_analiza_roznych_wspolczynnikow_modyfikujacych_srednia_rozkladu.tex}
-
-\chapter{Analiza otrzymanych wyników}
+\input{sections/0401_ewolucja_systemu.tex}
+\input{sections/0402_pierwsze_poprawki.tex}
+\input{sections/0403_wspolczynnik_modyfikujacy_srednia_rozkladu.tex}
+\input{sections/0404_analiza_roznych_wspolczynnikow_modyfikujacych_srednia_rozkladu.tex}
 
 \chapter{Podsumowanie}
 
 \listoftables
 \listoffigures
+\appendix
+\section{Załącznik: Publikacja}
+\includepdf[pages=-]{publication/paper.pdf}
 
 \thebibliography{99}
 \input{sections/bibliografia.tex}

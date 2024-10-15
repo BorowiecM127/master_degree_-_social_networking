@@ -48,3 +48,6 @@ Ina1
 Dummy14
 klasteryzację
 Ina0
+Barabasi-Albert
+Dummy19
+Dummy18

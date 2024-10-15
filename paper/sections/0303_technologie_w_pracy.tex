@@ -1,0 +1,20 @@
+\section{Implementacja sieci społecznej}
+W pracy został wykorzystany język Python do implementacji sieci społecznych, zapisu wyników, oraz tworzenia wykresów obrazujących wyniki.
+Główną biblioteką wykorzystywaną do implementacji sieci społecznych jest biblioteka NetworkX \cite{NetworkX}.
+Biblioteką do tworzenia wykresów została biblioteka Matplotlib \cite{Matplotlib}.
+Do odczytu oraz zapisu plików CSV została użyta biblioteka 'CSV' \cite{CSV} ze standardowej biblioteki języka Python.
+
+\subsection{Klasa Network}
+
+Każda sieć społeczna składa się z klasy Graph z biblioteki NetworkX \cite{NetworkX} oraz listy agentów przypisanych do każdego wierzchołka.
+Typ aktualizacji opinii jest również zdefiniowany w klasie.
+Ponadto, dla celów zapisu wyników, klasa zawiera nazwę sieci społecznej.
+
+\subsection{Klasa Agent}
+
+Każdy agent ma następujące parametry:
+\begin{itemize}
+    \item Wpływ na innych (influence) - Osiąga wartości 0-1 i określa wartość wpływu na innych agentów
+    \item Elastyczność (flexibility) - Osiąga wartości 0,1-1 i określa podatność agenta na zmianę opinii pod wpływem swoich sąsiadów
+    \item Opinia (opinion) - Osiąga wartości 0-1 i określa wartość opinii agenta w zależności od opinii sąsiadów
+\end{itemize}

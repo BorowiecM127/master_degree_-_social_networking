@@ -1,12 +1,13 @@
 \section{Opis sieci społecznościowej}
 Sieć społeczna wymieniona w tytule pracy ma za zadanie odpowiedzieć na pytanie, w jaki sposób formują się przekonania polityczne sieci społecznościowej.
+Zbadane zostały trzy rodzaje sieci społecznościowych: Barabási-Albert, Erdős-Rényi, Watts-Strogatz.
 Podstawą realizacji jest agent posiadający specyficzne właściwości.
 Współczynnik wpływu na innych wyraża, w jakim stopniu agent wywiera wpływ na opinie sąsiadów, a tym samym na działanie całej sieci.
 Elastyczność jednostki określa, w jakim stopniu sąsiedzi agenta są w stanie wpłynąć na zmianę jego opinii.
 Opinia początkowa definiuje położenie początkowe agenta na wykresie.
 
 \subsection{Opis działania agenta}
-Właściwości agenta mają następujące cechy:
+Każdy agent ma następujące parametry:
 \begin{table}[htbp]
     \centering
     \begin{tabular}{c|c|c}
@@ -22,6 +23,11 @@ Właściwości agenta mają następujące cechy:
 \end{table}
 
 Ograniczenia wartości mają na celu uniknięcie sytuacji, w której agent mógłby wyjść poza zakres możliwych do uzyskania opinii, tzn. przedział od 0 do 1.
-Wpływ na innych jest losowany z rozkładu równomiernego, żeby wyrównać szanse agentów na wpływ na innych.
-Opinia początkowa również jest losowana z rozkładu równomiernego, żeby w miarę możliwości równo rozłożyć opinie wszystkich agentów na początku istnienia sieci.
-Elastyczność jednostki jest losowana z rozkładu beta, żeby agenci byli bardziej skłonni do zmiany opinii.
+
+Cechy opisane w tabeli \ref{tab:agent_parameters} mają następujące uzasadnienie:
+\begin{itemize}
+    \item Wpływ na innych jest losowany z rozkładu równomiernego, żeby wyrównać szanse agentów na wpływ na innych.
+    \item Opinia początkowa również jest losowana z rozkładu równomiernego, żeby w miarę możliwości równo rozłożyć opinie wszystkich agentów na początku istnienia sieci.
+    \item Elastyczność jednostki jest losowana z rozkładu beta, żeby agenci byli bardziej skłonni do zmiany opinii.
+          Przedział wartości rozpoczynający się od \textit{0,1} jest związany ze wzorem modyfikatora środku rozkładu podanym w \ref{eq:triangular_distribution_center}.
+\end{itemize}

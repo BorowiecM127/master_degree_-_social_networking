@@ -1,0 +1,125 @@
+\section{Pierwsza symulacja}
+
+\subsection{Aktualizacja opinii agenta}
+Ewolucja sieci społecznościowej polega na zmianie opinii agentów, na bazie ich wewnętrznych właściwości oraz połączeń w obrębie sieci.
+Pozwalają one na wyznaczenie współczynników, które mają wpływ na środek rozkładu, z którego losowana jest nowa opinia.
+
+Współczynniki użyte do aktualizacji opinii, poza parametrami agenta, są wymienione poniżej:
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c|c}
+        \hline
+        Zmienna                            & Zakres wartości \\
+        \hline
+        Średnia opinii sąsiadów            & 0-1             \\
+        Udział sąsiadów agenta w populacji & 0-1             \\
+        Średnia wpływu sąsiadów            & 0-1             \\
+    \end{tabular}
+    \caption{Parametry aktualizacji opinii}
+    \label{tab:opinion_update_parameters}
+\end{table}
+
+\subsection{Rozkład trójkątny}
+Rozkład, z którego była losowana nowa wartość agenta, jest rozkładem trójkątnym.
+Dolną granicę przedziału wyznacza niższa z dwóch wartości: obecna opinia agenta lub średnia opinii sąsiadów, wymieniona w tabeli \ref{tab:opinion_update_parameters}.
+Górną granicą przedziału jest większa z nich.
+Centrum rozkładu $C$ było wyznaczane wg poniższego wzoru:
+
+\begin{equation}
+    C = (A_{ns} + N_{id}) * A_f
+    \label{eq:triangular_distribution_center}
+\end{equation}
+
+gdzie:
+\begin{itemize}
+    \item $A_{ns}$ - udział sąsiadów agenta w populacji (w tabeli \ref{tab:opinion_update_parameters})
+    \item $N_{id}$ - średnia wpływu sąsiadów (w tabeli \ref{tab:opinion_update_parameters})
+    \item $A_f$ - elastyczność agenta
+\end{itemize}
+
+Sumowanie średniej wpływu sąsiadów z udziałem sąsiadów agenta w populacji miało za zadanie spowodować, że na agenta z większą ilością sąsiadów wywierany jest większy wpływ.
+Z drugiej strony, na odizolowanych osobników wywierany jest mniejszy wpływ, co powoduje, że 'okopują' się oni w swoich poglądach.
+Z kolei elastyczność agenta we wzorze pozwala ograniczyć wpływ otoczenia na danego agenta.
+
+Rezultat jest taki, że huby mają duży wpływ na bliskie poglądowo węzły, zacieśniając je coraz bardziej, natomiast węzły z małą liczbą sąsiadów przesuwają się w kierunku huba dużo wolniej.
+
+Aktualizacja współrzędnych modelu była zmieniana w jednej iteracji równocześnie dla wszystkich węzłów w grafie.
+Za koniec ewolucji modelu uznajemy moment, w którym opinie wszystkich agentów mieszczą się w kwadracie o boku 0,1.
+Symulacje zostały uruchomione dla populacji 20, 50, 100, 200, 500, 1000, 2000 i 5000 agentów.
+Wyniki symulacji zostały przedstawione poniżej.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        \hline
+        Populacja & \multicolumn{3}{c}{Średnia liczba iteracji}                                    \\
+        \hline
+                  & Erdős-Rényi                                 & Barabási-Albert & Watts-Strogatz \\
+        \hline
+        20        & 6,3                                         & 7,2             & 8,1            \\
+        50        & 6,3                                         & 9,2             & 11,4           \\
+        100       & 6,1                                         & 11,1            & 13,7           \\
+        200       & 6,9                                         & 12,1            & 15,5           \\
+        500       & 7,7                                         & 13,0            & 17,2           \\
+        1000      & 8,1                                         & 14,4            & 19,0           \\
+        2000      & 8,7                                         & 14,5            & 19,3           \\
+        5000      & 9,6                                         & 15,0            & 19,9           \\
+    \end{tabular}
+    \caption{Wyniki symulacji wstępnej}
+    \label{tab:initial_results}
+\end{table}
+
+W tabeli \ref{tab:initial_results} przedstawione zostały wyniki symulacji wstępnej.
+Dla większej liczby agentów bardziej widać różnicę pomiędzy szybkością zbiegania agentów do centrum,
+jednak nie jest ona zbyt duża, ponieważ spodziewano się liczby około 20 iteracji dla rozmiaru populacji równego 5000.
+Ponadto okazało się, że czas zbiegania symulacji rośnie logarytmicznie względem wielkości populacji,
+co pozwala przewidzieć czas zbiegania dla danego rozmiaru populacji.
+
+
+\subsubsection{Nowy modyfikator środka rozkładu}
+W trakcie symulacji również kilkukrotnie program zamykał się z błędem.
+Okazało się, że wzór \ref{eq:triangular_distribution_center} pozwalał na uzyskanie wartości powyżej 1,
+co pokazano poniżej:
+
+\begin{equation}
+    C = (A_{ns} + N_{id}) * A_f = ([0-1] + [0-1]) * [0-1] = [0-2] * [0-1] = [0-2]
+    \label{eq:triangular_distribution_center_values}
+\end{equation}
+Z tego powodu musiał zostać zmieniony. Nowy wzór modyfikatora środka rozkładu prezentuje się następująco:
+
+\begin{equation}
+    C = \frac{N_{id} + A_{ns}}{2} * A_f
+    \label{eq:new_triangular_distribution_center}
+\end{equation}
+
+Aby pokazać, że nowy modyfikator środka rozkładu faktycznie uzyskuje wartości 0-1, przeprowadzony został następujący dowód:
+\begin{equation}
+    C = \frac{[0-1] + [0-1]}{2} * [0-1] = \frac{[0-2]}{2} * [0-1] = [0-1] * [0-1] = [0-1]
+    \label{eq:new_triangular_distribution_center_result}
+\end{equation}
+
+Po zmianie wzoru aktualizacji opinii uzyskano następujące rezultaty:
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        \hline
+        Populacja & \multicolumn{3}{c}{Średnia liczba iteracji}                                    \\
+        \hline
+                  & Erdős-Rényi                                 & Barabási-Albert & Watts-Strogatz \\
+        \hline
+        20        & 6,1                                         & 7,9             & 7,4            \\
+        50        & 5,5                                         & 9,1             & 10,4           \\
+        100       & 6,5                                         & 11,2            & 13,7           \\
+        200       & 6,9                                         & 11,4            & 15,0           \\
+        500       & 7,7                                         & 12,1            & 17,2           \\
+        1000      & 7,6                                         & 13,3            & 18,5           \\
+        2000      & 8,4                                         & 14,5            & 18,8           \\
+        5000      & 8,8                                         & 14,7            & 19,9           \\
+    \end{tabular}
+    \caption{Wyniki symulacji ze średnią udziału sąsiadów agenta w populacji i średniej opinii sąsiadów}
+    \label{tab:results_with_mean_neighbour_population_share_and_neighbour_opinion_mean}
+\end{table}
+
+Jak widać w tabeli \ref{tab:results_with_mean_neighbour_population_share_and_neighbour_opinion_mean},
+wyniki nie zmieniły się znacząco, natomiast błąd w programie przestał występować. Oznacza to, że należało upodobnić sieć bardziej do sieci rzeczywistej.
